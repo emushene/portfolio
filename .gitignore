@@ -1,0 +1,11 @@
+# Ignore the frontend directory
+frontend/node_modules
+
+# Ignore all .log files
+*.log
+
+# Ignore a specific file
+config.yml
+
+# Ignore all files in a specific directory
+/build/
