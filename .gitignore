@@ -9,3 +9,5 @@ config.yml
 
 # Ignore all files in a specific directory
 /build/
+
+.fake

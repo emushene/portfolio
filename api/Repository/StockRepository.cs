@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using api.Interfaces;
+using api.Models;
 using Microsoft.EntityFrameworkCore;
 using api.Data;
-using api.Models;
-using api.Interfaces; // Make sure this namespace is correct
 
 namespace api.Repository
 {
@@ -16,9 +16,9 @@ namespace api.Repository
             _context = context;
         }
 
-        public async Task<List<Stock>> GetAllAsync()
+        public Task<List<Stock>> GetAllAsync()
         {
-            return await _context.Stock.ToListAsync();
+            return _context.Stock.ToListAsync();
         }
     }
 }
