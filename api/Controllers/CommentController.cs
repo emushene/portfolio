@@ -6,6 +6,7 @@ using api.Data;
 using api.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using api.Mappers;
+using api.Dtos.Comments;
 
 namespace api.Controllers
 {
@@ -14,9 +15,11 @@ namespace api.Controllers
     public class CommentController : ControllerBase
     {
         private readonly ICommentRepository _commentRepo;
-        public CommentController(ICommentRepository commentRepo)
+        private readonly IStockRepository _stockRepo;
+        public CommentController(ICommentRepository commentRepo, IStockRepository stockRepo )
         {
             _commentRepo = commentRepo;
+            _stockRepo = stockRepo;
         }
         //GET
         [HttpGet]
@@ -41,11 +44,51 @@ namespace api.Controllers
             }
 
         //POST
+        [HttpPost("{stockId}")]
+        public async Task<IActionResult> Create([FromRoute] int stockId, CreateCommentDto commentDto){
+
+           if(!await _stockRepo.StockExists(stockId)){
+            return BadRequest("This Stock doesnt Exist yet");
+           }
+
+           var commentModel = commentDto.ToCommentFromCreate(stockId);
+
+           await _commentRepo.CreateAsync(commentModel);
+           return CreatedAtAction(nameof(GetById), new {id = commentModel.Id}, commentModel.ToCommentDto());
+
+        }
         //PUT
+        [HttpPut]
+        [Route("{id}")]
+
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCommentRequestDto updateDto){
+            var comment = await _commentRepo.UpdateAsync(id, updateDto.ToCommentFromUpdate());
+
+            if(comment == null){
+                return NotFound("This Comment appears to have been deleted");
+            }
+
+            return Ok(comment.ToCommentDto());
+
+        }
         //DELETE
+        [HttpDelete]
+        [Route("{id}")]
 
+        public async Task<IActionResult> Delete([FromRoute] int id ){
 
+            var commentModel = await _commentRepo.DeleteAsync(id);
 
+                if(commentModel == null){
+
+            return NotFound("This Comment was deleted earlier, its not here");
+        }
+
+        return Ok(commentModel);
+
+        }
+
+    
 
 
     }
