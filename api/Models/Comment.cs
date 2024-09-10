@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace api.Models
 {
+     [Table("Comments")]
     public class Comment{
-
+       
         public int Id { get; set; }
 
         public string Title { get; set; } = string.Empty;
