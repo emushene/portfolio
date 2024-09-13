@@ -44,7 +44,7 @@ namespace api.Repository
         public async Task<List<Stock>> GetAllAsync(QueryObject query)
         {
             // Start with all stocks and include related comments
-            var stocks = _context.Stock.Include(c => c.Comment).AsQueryable();
+            var stocks = _context.Stock.Include(c => c.Comment).ThenInclude(a => a.AppUser).AsQueryable();
 
             // Apply filtering by company name if provided
             if (!string.IsNullOrWhiteSpace(query.CompanyName))

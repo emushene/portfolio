@@ -11,7 +11,7 @@ namespace api.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(100)] // Optional: specify a max length for the title
+        [StringLength(100)]
         public string Title { get; set; } = string.Empty;
 
         [Required]
@@ -19,14 +19,15 @@ namespace api.Models
 
         public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
 
+        [ForeignKey(nameof(Stock))]
         public int? StockId { get; set; }
         
         public Stock? Stock { get; set; }
 
         [Required]
+        [ForeignKey(nameof(AppUser))]
         public string? AppUserId { get; set; }
 
-       
-        public AppUser AppUser { get; set; }
+        public AppUser? AppUser { get; set; }
     }
 }
