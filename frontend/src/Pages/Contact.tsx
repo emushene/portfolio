@@ -1,4 +1,10 @@
 import React from "react";
+import AffliliateLogos from "../Components/AffliliateLogos/AffliliateLogos";
+
+
+
+
+
 
 type Props = {};
 
@@ -58,9 +64,7 @@ const Contact = (props: Props) => {
           </form>
         </div>
       </div>
-      <div className="sm:mt-12 md:mt-8 xl:mt-4 sm:ml-4 md:ml-16 xl:ml-64 2xl:ml-64 flex flex-col items-center gap-12 md:gap-24 md:flex-row sm:mr-4 md:mr-10 xl:mr-20 p-8 sm:flex-grow">
-        Add icons here
-      </div>
+          <AffliliateLogos />
     </div>
   );
 };

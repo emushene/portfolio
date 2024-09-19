@@ -22,7 +22,7 @@ const DesignPage = (props: Props) => {
    <h1>RATIO LIST</h1>
     <RatioList data={testIncomeStatementData} config={tableConfig}/>
     <h1>END RATIO LIST</h1>
-     <Table data={testIncomeStatementData} config={tableConfig}/>
+     <Table data={testIncomeStatementData} configs={tableConfig}/>
     </>
   )
 }

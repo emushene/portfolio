@@ -11,7 +11,7 @@ interface Props {
 
 const Card: React.FC<Props> = ({ id, searchResult, onPortfolioCreate }: Props): JSX.Element => {
   return (
-    <div className="container flex flex-wrap gap-4">
+    <div className="container flex flex-wrap gap-4 ">
       <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg flex flex-col overflow-hidden">
         <div className="h-60vh m-6">
           <img
@@ -20,7 +20,7 @@ const Card: React.FC<Props> = ({ id, searchResult, onPortfolioCreate }: Props): 
             alt="company logo"
           />
         </div>
-        <div className="border-l-teal-900 flex justify-between m-4">
+        <div className="border-l-teal-900 flex justify-between m-4 p-4">
           <Link to={`/company/${searchResult.symbol}`} className="text-gray-700 text-2xl">
             {searchResult.name} ({searchResult.symbol})
           </Link>

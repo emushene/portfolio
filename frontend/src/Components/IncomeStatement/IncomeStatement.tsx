@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { CompanyIncomeStatement } from '../../company';
-import { formatLargeMonetaryNumber, formatRatio } from '../../Helpers/HelpFunctions';
-import { useOutletContext } from 'react-router';
-import { getIncomeStatement } from '../../api';
-import Table from '../Table/Table';
-import { config } from 'dotenv';
+import React, { useEffect, useState } from "react";
+import { CompanyIncomeStatement } from "../../company";
+import {
+  formatLargeMonetaryNumber,
+  formatRatio,
+} from "../../Helpers/HelpFunctions";
+import { useOutletContext } from "react-router";
+import { getIncomeStatement } from "../../api";
+import Table from "../Table/Table";
 
-type Props = {}
+type Props = {};
 
 const configs = [
-  {
-    label: "Date",
-    render: (company: CompanyIncomeStatement) => company.date,
-  },
+  { label: "Date", render: (company: CompanyIncomeStatement) => company.date },
   {
     label: "Revenue",
     render: (company: CompanyIncomeStatement) =>
@@ -63,7 +62,7 @@ const configs = [
       formatRatio(company.grossProfitRatio),
   },
   {
-    label: "Opearting Income Ratio",
+    label: "Operating Income Ratio",
     render: (company: CompanyIncomeStatement) =>
       formatRatio(company.operatingIncomeRatio),
   },
@@ -74,33 +73,29 @@ const configs = [
   },
 ];
 
-
 const IncomeStatement = (props: Props) => {
-const ticker = useOutletContext<string>();
+  const ticker = useOutletContext<string>();
+  const [incomeStatement, setIncomeStatement] = useState<
+    CompanyIncomeStatement[] | undefined
+  >();
 
-const [incomeStatement, setIncomeStatement] = useState<CompanyIncomeStatement[]>();
-useEffect(() => {
-  const incomeStatementGet = async () => {
-    const result = await getIncomeStatement(ticker)
-    setIncomeStatement(result!.data);
-  }
-  incomeStatementGet();
-}, [])
-
+  useEffect(() => {
+    const incomeStatementGet = async () => {
+      const result = await getIncomeStatement(ticker);
+      setIncomeStatement(result!.data);
+    };
+    incomeStatementGet();
+  }, [ticker]);
 
   return (
     <>
-    {incomeStatement ? (
-      <>
-      <Table config={configs} data={incomeStatement}/>
-      </>
-    ) : (<>Loading....</>)}
+      {incomeStatement ? (
+        <Table configs={configs} data={incomeStatement} />
+      ) : (
+        <>Loading....</>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default IncomeStatement
-
-
-
-
+export default IncomeStatement;
