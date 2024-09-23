@@ -22,13 +22,17 @@ const CompanyPage = (props: Props) => {
   }, [ticker]); // Add ticker as a dependency
 
   return (
-    <div className='container h-[90vh]'>
+    <div className='container h-[90vh] overflow-hidden'>
       {company ? (
-        <div className="w-full relative flex m-44 ct-docs-disable-sidebar-content overflow-x-hidden sm:mt-16 xl:mt-32 sm:h-[88vh] xl:h-[90vh]">
+        <div className="w-full relative flex m-44 ct-docs-disable-sidebar-content
+         overflow-x-hidden sm:mt-16 xl:mt-32 sm:h-[88vh] xl:h-[90vh]">
 
         <Sidebar/>
         <CompanyDashboard ticker={ticker!}>
           <Tile title="Company Name" subTitle={company.companyName}></Tile>
+          <Tile title="Address" subTitle={company.address} ></Tile>
+          <Tile title="Website" subTitle={company.website}></Tile>
+          <Tile title="Telephone" subTitle={company.phone}></Tile>
             </CompanyDashboard>
 
 

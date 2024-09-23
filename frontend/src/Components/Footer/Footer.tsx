@@ -18,7 +18,7 @@ interface Props {}
 
 const Footer = (props: Props) => {
   return (
-    <div className="py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-gray-100 text-sm mt-24">
+    <div className="select-none py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-gray-100 text-sm mt-8">
       {/**TOP */}
       <div className="flex flex-col md:flex-row justify-between gap-24 p-8">
         {/**Left */}
@@ -109,7 +109,7 @@ const Footer = (props: Props) => {
          </div>
         </div>
         {/**Right */}
-        <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col justify-between xl:w-full gap-2 p-4 border-red-300">
+        <div className=" w-full md:w-1/2 lg:w-1/4 flex flex-col justify-between xl:w-full gap-2 p-4 border-red-300">
           <h1 className="text-lg font-semibold"> SUBSCRIBE</h1>
           <p>
             {" "}

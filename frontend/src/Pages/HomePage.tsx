@@ -6,7 +6,7 @@ interface Props  {}
 
 const HomePage = (props: Props) => {
   return (
-    <div className='mt-24 w-[100%]'>
+    <div className='select-none sm:mt-4 md:mt-24 w-[100%] '>
      
       <Hero/>
      <AffliliateLogos/>

@@ -16,7 +16,7 @@ const RatioList = ({config, data}: Props) => {
                     <div className="flex flex-col justify-between min-w-0">
                         
                       <p className="text-sm font-medium text-gray-900 truncate">
-                        {row.Label} 
+                        {row.label} 
                         </p> 
                         <p className="text-sm text-gray-500truncate">
                         {row.subTitle && row.subTitle}    
