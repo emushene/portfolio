@@ -44,13 +44,13 @@ const MyPortfolio: React.FC = () => {
   };
 
   return (
-    <div className="selection-none flex flex-col justify-center items-center flex-grow relative" ref={containerRef}>
+    <div className="select-none flex flex-col justify-center items-center flex-grow relative" ref={containerRef}>
       <div className="sticky top-20 z-10 bg-white">
-        <div className="flex justify-center gap-12">
+        <div className="md:flex justify-center gap-12 sm:flex-row sm:items-center sm:justify-center ">
           <a
             href="/RichardResume.pdf" // Correct path to the resume file
             download="Richard_Mucene_Resume.pdf" // Update the file name as needed
-            className="mt-4 inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 border-red-400 border-2"
+            className=" mt-4 inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 border-red-400 border-2"
           >
             Download Resume
           </a>

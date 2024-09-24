@@ -68,8 +68,8 @@ const SearchPage: React.FC = () => {
         />
       </div>
       <ListPortfolio portfolioValues={portfolioValues} onPortfolioDelete={onPortfolioDelete} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-screen-lg">
-        {serverError && <h1>{serverError}</h1>}
+      <div className="flex flex-col items-center gap-4 w-full max-w-screen-lg">
+        {serverError && <h1 className='font-semibold font-mono text-red-600 text-2xl'>{serverError}</h1>}
         <CardList
           searchResults={searchResult}
           onPortfolioCreate={onPortfolioCreate}

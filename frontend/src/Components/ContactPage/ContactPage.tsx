@@ -51,44 +51,42 @@ const ContactPage = (props: Props) => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center select-none md:ml-16 xl:ml-64 2xl:ml-64  
+      className="flex flex-col items-center mt-8 mb-16 justify-center select-none md:ml-16 xl:ml-64 2xl:ml-64  
     gap-6 md:gap-24 md:flex-row xl:mr-20"
     >
       <div className="flex items-center justify-center flex-1">
-        <div className="flex p-4 flex-col items-center flex-wrap w-2/3 flex-1 ">
-          <h1 className="text-5xl font-bold lg:text-6xl lg:max-w-md lg:text-left">
+        <div className="flex p-4 flex-col flex-wrap w-2/3 flex-1 ">
+          <h1 className="text-5xl font-bold lg:text-6xl lg:max-w-md">
             Let's work together
           </h1>
           <div className="p-4">
-            <h2 className="text-xl">Mail</h2>
-            <span className="text-gray-500 cursor-pointer">
+            <h2 className="text-xl font-bold">Mail</h2>
+            <span className="text-gray-500 cursor-pointer text-2xl">
               e.mushene@gmail.com
             </span>
           </div>
-          <div className="p4">
-            <h2 className="">Address</h2>
-            <span className="text-gray-500">
+          <div className="p-4 text-xl">
+            <h2 className="font-bold">Address</h2>
+            <span className="text-gray-500 text-2xl">
               12 Minerva St, Kensington. Johannesburg 2094
             </span>
           </div>
-          <div className="p-4">
+          <div className="p-4 font-bold text-xl">
             <h2>Telephone</h2>
-            <span className="text-gray-500">+27 72 620 3386</span>
+            <span className="text-gray-500 text-2xl">+27 72 620 3386</span>
           </div>
         </div>
-        <div className="w-1/3">
-         
-        </div>
+        <div className="w-1/3"></div>
       </div>
-      <div className="flex flex-1 w-full items-center justify-center flex-grow">
+      <div className="flex flex-1 w-full items-center justify-center flex-grow ">
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="min-w-[80%] flex flex-col justify-between shadow sm:p-8"
+          className="min-w-[80%] gap-2 flex flex-col justify-between shadow sm:p-8"
         >
           <span className="text-teal-600">Dear Richard Mucene,</span>
           <textarea
-            rows={8}
+            rows={12}
             placeholder="I am writing this message, regarding..."
             className="w-full p-2 border-gray-300 border rounded text-teal-900 focus:border-blue-300 focus:outline-none"
             name="user_message"
@@ -109,7 +107,7 @@ const ContactPage = (props: Props) => {
             className="sm:min-w-[90%] w-full p-2 border-gray-300 border rounded focus:border-blue-300 focus:outline-none"
             name="user_name"
           />
-          <button className="px-4 py-2 mt-8 bg-gray-600 text-white rounded border-gray-300">
+          <button className="px-4 py-2 mt-8 bg-gray-600 text-white rounded border-gray-300 hover:bg-green-500 hover:opacity-70">
             Send Message
           </button>
           {success && (
