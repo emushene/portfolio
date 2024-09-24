@@ -14,30 +14,42 @@ import DesignPage from "../Pages/DesignPage/DesignPage";
 import BalanceSheet from "../Components/BalanceSheet/BalanceSheet";
 import CashflowStatement from "../Components/CashStatement/CashflowStatement";
 import About from "../Components/About/About";
+import BlogLogin from "../Components/Blog/BlogLogin";
+import CreatePost from "../Components/Blog/CreatePost";
+import NotFound from "../NotFound/NotFound";
 
 export const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App/>,
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/search", element: <SearchPage /> },
+      {
+        path: "/company/:ticker",
+        element: <CompanyPage />,
         children: [
-            {path: "/", element: <HomePage/>},
-            {path: "/search", element: <SearchPage/>},
-            {path: "/company/:ticker", element: <CompanyPage/>,
-                children: [
-                    {path: "company-profile", element: <CompanyProfile/>},
-                    {path: "income-statement", element: <IncomeStatement/>},
-                    {path: "balance-sheet", element: <BalanceSheet/>},
-                    {path: "cashflow-statement", element: <CashflowStatement/>},
-                ]
-            },
-            {path: "/company/", element: <CompanyPage/>},
-            {path: "/dashboard", element: <Dashboard/>},
-            {path: "/about-me", element: <About/>},
-            {path: "/resume", element: <Resume/>},
-            {path: "/blog", element: <Blog/>},
-            {path: "/contact", element: <Contact/>},
-            {path: "/myprofile", element: <MyProfile/>},
-            {path: "/design-guide", element: <DesignPage/>},
+          { path: "company-profile", element: <CompanyProfile /> },
+          { path: "income-statement", element: <IncomeStatement /> },
+          { path: "balance-sheet", element: <BalanceSheet /> },
+          { path: "cashflow-statement", element: <CashflowStatement /> },
         ],
-    }
-])
+      },
+      { path: "/dashboard", element: <Dashboard /> },
+      { path: "/about-me", element: <About /> },
+      { path: "/resume", element: <Resume /> },
+      {
+        path: "/blog",
+        element: <Blog />,
+        children: [
+          { path: "blog-login", element: <BlogLogin /> },
+          { path: "blog-create", element: <CreatePost /> },
+        ],
+      },
+      { path: "/contact", element: <Contact /> },
+      { path: "/myprofile", element: <MyProfile /> },
+      { path: "/design-guide", element: <DesignPage /> },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+]);
