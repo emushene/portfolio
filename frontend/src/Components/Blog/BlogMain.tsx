@@ -5,7 +5,7 @@ type Props = {}
 const BlogMain = (props: Props) => {
   return (
     <div>
-        
+      
     </div>
   )
 }
