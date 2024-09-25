@@ -36,9 +36,9 @@ const Footer = (props: Props) => {
 
   return (
     <div className="select-none py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-gray-100 text-sm mt-8">
-      {/**TOP */}
+      {/**TOPc */}
       <div className="flex flex-col md:flex-row justify-between gap-24 p-8">
-        {/**Left */}
+        {/**Left fd*/}
         <div className="w-1/2 flex flex-col gap-2">
           <Link to={"/"}>
             <img
