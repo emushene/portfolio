@@ -12,7 +12,7 @@ const About = (props: Props) => {
       <div className="flex justify-center md:justify-center">
         <img
           src={profilepic}
-          alt="Your Profile Picture"
+          alt="richard-mucene-profile"
           className="rounded-full w-48 h-56 md:w-64 md:h-64 object-cover"
         />
       </div>

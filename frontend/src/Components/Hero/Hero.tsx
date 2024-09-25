@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import potrait from "../img/richard-mucene-potrait-devops.png";
-import bgpic from "./richard-mucene-devops-engineer-systems-administrator-background.png";
+
 
 interface Props {}
 

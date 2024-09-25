@@ -56,7 +56,7 @@ const CashflowStatement = (props: Props) => {
         }
           fetchCashFlow()
           
-      }, [])
+      }, [ticker])
 
   return (
     <>

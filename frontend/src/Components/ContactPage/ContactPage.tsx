@@ -1,6 +1,6 @@
 import React, { useRef, useState, FormEvent, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import contactpic from "../Hero/richard-mucene-devops-engineer-systems-administrator-background.png";
+
 
 type Props = {};
 

@@ -57,7 +57,7 @@ const Blog = () => {
       }
     };
     getPosts();
-  }, []);
+  }, [postCollections]); // Added postCollections as a dependency
 
   const toggleExpand = (id: string) => {
     setPostList((prevPostList) =>
