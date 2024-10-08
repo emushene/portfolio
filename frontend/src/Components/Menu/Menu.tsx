@@ -22,11 +22,10 @@ const Menu = (props: Props) => {
                 onClick={() => SetOpen(prev => !prev)} 
             />
             {open && (
-                <div className='absolute bg-gray-800 text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-10'>
+                <div className='absolute bg-gray-800 text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center pt-6 gap-8 text-xl z-10'>
                     <Link to="/" onClick={handleLinkClick}>Home</Link>
                     <Link to="/resume/" onClick={handleLinkClick}>Resume</Link>
-                    <Link to="/dashboard" onClick={handleLinkClick}>Dashboard</Link>
-                    <Link to="/search" onClick={handleLinkClick}>Search</Link>
+                    <Link to="/search" onClick={handleLinkClick}>Project-App</Link>
                     <Link to="/blog" onClick={handleLinkClick}>Blog</Link>
                     <Link to="/contact" onClick={handleLinkClick}>Contact</Link>
                    

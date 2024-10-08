@@ -142,31 +142,31 @@ const Footer = (props: Props) => {
           <div className="flex flex-col gap-6">
             <h1 className="font-semibold text-lg">Richard Mucene</h1>
             <div className="flex flex-col gap-6">
-              <Link to={"/"}>Resume</Link>
-              <Link to={"/"}>Careers</Link>
-              <Link to={"/"}>Affiliates</Link>
-              <Link to={"/"}>Blog</Link>
-              <Link to={"/"}>Contact</Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Resume</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Careers</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Affiliates</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Blog</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Contact</h5></Link>
             </div>
           </div>
           <div className="w-full flex flex-col gap-6">
             <h1 className="font-semibold text-lg">Shop</h1>
             <div className="w-full flex flex-col gap-6">
-              <Link to={"/"}>New Arrivals</Link>
-              <Link to={"/"}>Accessories</Link>
-              <Link to={"/"}>Affiliates</Link>
-              <Link to={"/"}>Computer Hardware</Link>
-              <Link to={"/"}>Software Development</Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">New Arrivals</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Accessories</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Affiliates</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Computer Hardware</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Software Development</h5></Link>
             </div>
           </div>
           <div className="w-full flex flex-col gap-6">
             <h1 className="font-semibold text-lg">Help</h1>
             <div className="w-full flex flex-col gap-6">
-              <Link to={"/"}>Customer Services</Link>
-              <Link to={"/"}>My Account</Link>
-              <Link to={"/"}>Find Us</Link>
-              <Link to={"/"}>Gift Card</Link>
-              <Link to={"/"}>Legal & Privacy</Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Customer Services</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">My Account</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Find Me</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Gift Card</h5></Link>
+              <Link to={"/"}><h5 className="hover:font-bold hover:text-blue-800">Legal & Privacy</h5></Link>
             </div>
           </div>
         </div>

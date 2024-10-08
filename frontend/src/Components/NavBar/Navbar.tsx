@@ -56,27 +56,27 @@ const Navbar: React.FC = () => {
 
           <div className="hidden xl:flex gap-4 text-sm">
             <Link to={"/"}>
-              <h2 className="text-sm sm:text-lg md:text-xl hover:font-bold hover:text-rose-400 text-orange-900">
+              <h2 className="text-sm sm:text-lg md:text-xl hover:text-rose-400 hover:font-extrabold text-orange-900">
                 Home
               </h2>
             </Link>
             <Link to={"/resume/"}>
-              <h2 className="text-sm sm:text-lg md:text-xl hover:font-bold hover:text-rose-400 text-orange-900">
+              <h2 className="text-sm sm:text-lg md:text-xl hover:font-extrabold hover:text-rose-400 text-orange-900">
                 Resume
               </h2>
             </Link>
             <Link to={"/company/search"}>
-              <h2 className="text-sm sm:text-lg md:text-xl hover:font-bold hover:text-rose-400 text-orange-900">
+              <h2 className="text-sm sm:text-lg md:text-xl hover:font-extrabold hover:text-rose-400 text-orange-900">
                 Project-App
               </h2>
             </Link>
             <Link to={"/blog"}>
-              <h2 className="text-sm sm:text-lg md:text-xl hover:font-bold hover:text-rose-400 text-orange-900">
+              <h2 className="text-sm sm:text-lg md:text-xl hover:font-extrabold hover:text-rose-400 text-orange-900">
                 Blog
               </h2>
             </Link>
             <Link to={"/contact"}>
-              <h2 className="text-sm sm:text-lg md:text-xl hover:font-bold hover:text-rose-400 text-orange-900">
+              <h2 className="text-sm sm:text-lg md:text-xl hover:font-extrabold hover:text-rose-400 text-orange-900">
                 Contact
               </h2>
             </Link>

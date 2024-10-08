@@ -2,9 +2,9 @@ import React, { SyntheticEvent, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { CompanySearch } from '../company';
 import { searchCompanies } from '../api';
-import Search from '../Search/Search';
 import ListPortfolio from '../Components/Portfolio/PortfolioList/ListPortfolio';
 import CardList from '../Components/CardList/CardList';
+import SearchBar from '../Components/SearchBar/SearchBar';
 
 const SearchPage: React.FC = () => {
   const [search, setSearch] = useState<string>("");
@@ -64,12 +64,12 @@ const SearchPage: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center min-h-screen gap-5 overflow-hidden text-blue-900 xl:mt-24 sm:mt-24">
-      <div className='hidden'>
-        <Search
+      <div className='md:hidden border p-2 flex items-center'>
+        <SearchBar
           onSearchSubmit={onSearchSubmit}
           search={search}
           handleSearchChange={handleSearchChange}
-        />
+          />
       </div>
       <ListPortfolio portfolioValues={portfolioValues} onPortfolioDelete={onPortfolioDelete} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-screen-lg">

@@ -34,11 +34,11 @@ const CompanyPage = (props: Props) => {
   };
 
   return (
-    <div className=" select-none h-[90vh] overflow-hidden">
+    <div className=" md:h-[90vh] overflow-hidden xl:mr-64">
       {company ? (
         <div
-          className=" w-[90vw] relative flex m-44 ct-docs-disable-sidebar-content
-         overflow-x-hidden sm:mt-16 xl:mt-32 sm:h-[88vh] xl:h-[90vh]"
+          className="flex w-[90vw] relative  m-44 ct-docs-disable-sidebar-content
+         overflow-x-hidden xl:mt-32 sm:h-[70vh] xl:h-[70vh]"
         >
           
           <Sidebar />

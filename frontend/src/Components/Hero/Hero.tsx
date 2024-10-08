@@ -10,7 +10,7 @@ const Hero = (props: Props) => {
     <div className="mb-6 sm:mb-8 flex flex-col-reverse mx-auto lg:flex-row items-center justify-center lg:mx-64">
       <div className="p-4 flex flex-col items-center lg:w-1/3 flex-1 gap-6">
         <div>
-          <h2 className="select-none text-2xl sm:text-3xl md:text-5xl font-bold text-center lg:text-6xl">
+          <h2 className="text-gray-700 text-2xl sm:text-3xl md:text-5xl font-bold text-center lg:text-6xl">
             Richard Mucene DevOps Engineer!
           </h2>
         </div>
