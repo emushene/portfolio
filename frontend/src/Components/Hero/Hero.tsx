@@ -7,7 +7,7 @@ interface Props {}
 
 const Hero = (props: Props) => {
   return (
-    <div className=" sm:mb-8 flex flex-col-reverse mx-auto lg:flex-row items-center justify-center lg:mx-64">
+    <div className="mb-6 sm:mb-8 flex flex-col-reverse mx-auto lg:flex-row items-center justify-center lg:mx-64">
       <div className="p-4 flex flex-col items-center lg:w-1/3 flex-1 gap-6">
         <div>
           <h2 className="select-none text-2xl sm:text-3xl md:text-5xl font-bold text-center lg:text-6xl">
@@ -15,7 +15,7 @@ const Hero = (props: Props) => {
           </h2>
         </div>
         <div>
-          <p className="p-55 select-none sm:text-sm md:text-2xl sm:text-wrap d:text-center text-gray-400 lg:max-w-md lg:text-left">
+          <p className="select-none sm:text-sm md:text-2xl sm:text-wrap md:text-center text-gray-400 lg:max-w-md lg:text-left md:mb-10">
             Certified AWS and Azure Cloud Engineer with 17 years of IT Support
             experience. I specialize in automating CI/CD pipelines, managing
             scalable cloud infrastructure, and ensuring system reliability and

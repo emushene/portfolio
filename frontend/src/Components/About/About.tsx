@@ -13,7 +13,7 @@ const About = (props: Props) => {
         <img
           src={profilepic}
           alt="richard-mucene-profile"
-          className="rounded-full w-32 h-32 md:w-64 md:h-64 object-cover"
+          className="rounded-full w-32 h-32 md:w-64 md:h-64 object-cover filter grayscale"
         />
       </div>
 

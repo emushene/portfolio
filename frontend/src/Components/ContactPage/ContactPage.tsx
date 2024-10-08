@@ -56,24 +56,22 @@ const ContactPage = (props: Props) => {
     >
       <div className="flex items-center justify-center flex-1">
         <div className="flex p-4 flex-col flex-wrap w-2/3 flex-1 ">
-          <h1 className="text-5xl font-bold lg:text-6xl lg:max-w-md">
-            Let's work together
+          <h1 className="text-3xl md:text-5xl font-bold lg:text-6xl lg:max-w-md">
+            Let's work <span className="block">together</span>
           </h1>
-          <div className="p-4">
-            <h2 className="text-xl font-bold">Mail</h2>
-            <span className="text-gray-500 cursor-pointer text-2xl">
-              e.mushene@gmail.com
-            </span>
+          <div className="p-2 md:p-4">
+            <h2 className="md:text-2xl font-bold text-gray-600">Mail</h2>
+            <span className="text-gray-500 cursor-pointer md:text-2xl">e.mushene@gmail.com</span>
           </div>
-          <div className="p-4 text-xl">
-            <h2 className="font-bold">Address</h2>
-            <span className="text-gray-500 text-2xl">
+          <div className=" p-2 md:p-4 md:text-2xl">
+            <h2 className="font-bold text-gray-700">Address</h2>
+            <span className="text-gray-500 text-sm md:text-2xl">
               12 Minerva St, Kensington. Johannesburg 2094
             </span>
           </div>
-          <div className="p-4 font-bold text-xl">
-            <h2>Telephone</h2>
-            <span className="text-gray-500 text-2xl">+27 72 620 3386</span>
+          <div className="p-2 sm:p-4 font-bold md:text-2xl">
+            <h2 className="text-gray-700">Telephone</h2>
+            <span className="text-gray-500 text-sm md:text-2xl">+27 72 620 3386</span>
           </div>
         </div>
         <div className="w-1/3"></div>
@@ -82,7 +80,7 @@ const ContactPage = (props: Props) => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="min-w-[80%] gap-2 flex flex-col justify-between shadow sm:p-8"
+          className="min-w-[90%] sm:min-w-[80%] gap-2 flex flex-col justify-between md:p-12 p-4 shadow-2xl"
         >
           <span className="text-teal-600">Dear Richard Mucene,</span>
           <textarea
