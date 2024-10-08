@@ -7,20 +7,20 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 mx-10 md:mx-32">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 md:mx-32 text-gray-600 text-xs sm:text-sm lg:text-lg">
       {/* Profile Picture */}
       <div className="flex justify-center md:justify-center">
         <img
           src={profilepic}
           alt="richard-mucene-profile"
-          className="rounded-full w-48 h-56 md:w-64 md:h-64 object-cover"
+          className="rounded-full w-32 h-32 md:w-64 md:h-64 object-cover"
         />
       </div>
 
       {/* About Me Text with Integrated Photos and Captions */}
       <div className="col-span-2 space-y-4">
-        <h2 className="sm:text-sm md:text-2xl font-bold mb-4">About Me</h2>
-        <p className="sm:text-sm md:text-xl xl:text-2xl tracking-wide">
+        <h2 className="font-bold mb-4 font-gray-700 text-xl">About Me</h2>
+        <p className="">
           Family and community are at the core of who I am. As a devoted father
           of four, I’ve always believed that the values we instill at home
           resonate in every aspect of life. I’ve spent 25 years in South Africa,
@@ -29,7 +29,7 @@ const About = (props: Props) => {
           a balance between my personal life and professional aspirations.
         </p>
         <div className="relative mb-4">
-          <p className="sm:text-sm md:text-xl xl:text-2xl tracking-wide">
+          <p className="">
             I’m deeply passionate about athletics, which has been a lifelong
             pursuit that keeps me grounded and energized. Whether it’s running,
             participating in team sports, or staying active with my family,
@@ -44,7 +44,7 @@ const About = (props: Props) => {
               alt="Team Player"
               className="rounded-lg object-cover w-full md:h-auto"
             />
-            <p className="text-center text-sm text-gray-500 mt-2">
+            <p className="text-center text-xs text-gray-500 mt-2">
               Participating at a team-building event with colleagues from{" "}
               <a
                 href="https://netsurit.com/en-us/"
@@ -58,7 +58,7 @@ const About = (props: Props) => {
             </p>
           </div>
         </div>
-        <p className="sm:text-sm md:text-xl xl:text-2xl tracking-wide">
+        <p className="tracking-wide  ">
           Collaboration and teamwork are central to my approach to both life and
           work. As a DevOps Engineer at KPFC Builders, I lead initiatives to
           develop and implement ERP solutions for a multi-retail setup, ensuring
@@ -68,7 +68,7 @@ const About = (props: Props) => {
           This belief extends into my professional life, where I thrive in environments that foster innovation and collective problem-solving.
         </p>
         <div className="relative mb-4">
-          <p className="sm:text-sm md:text-xl xl:text-2xl tracking-wide">
+          <p className="">
             I am a strong advocate for mentoring and training others, as I find
             immense satisfaction in helping colleagues and aspiring IT
             professionals reach their full potential.
@@ -79,14 +79,14 @@ const About = (props: Props) => {
               alt="Award"
               className="rounded-lg object-cover w-full md:h-auto"
             />
-            <p className="text-center text-sm text-gray-500 mt-2 mb-2">
+            <p className="text-center text-xs text-gray-500 mt-2 mb-2">
               Receiving an award together with my Team for Best Project Management from{" "}
               <a href="https://www.t-systems.com/en" target="_blank" rel="noopener noreferrer" className="text-gray-600 underline">T-Systems</a> SA during our successful{" "}
               <a href="https://www.oldmutual.co.za/about/old-mutual-insure" target="_blank" rel="noopener noreferrer" className="text-gray-600 underline">Old Mutual Insure</a> Data Center Move.
             </p>
           </div>
         </div>
-        <p className="sm:text-sm md:text-xl xl:text-2xl tracking-wide">
+        <p className="">
           Technology has always been a passion of mine. My career in IT has
           allowed me to channel this passion into creating solutions that drive
           efficiency and innovation. Over the years, I’ve specialized in DevOps,
@@ -96,7 +96,7 @@ const About = (props: Props) => {
           ensuring high system availability—always with an eye toward optimizing
           performance.
         </p>
-        <p className="sm:text-sm md:text-xl xl:text-2xl tracking-wide">
+        <p className="">
           Living in Kenya now, I am eager to bring my global perspective and
           experience to new challenges and opportunities. Whether it’s
           collaborating with teams, mentoring others, or pushing the boundaries

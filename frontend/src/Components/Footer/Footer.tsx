@@ -35,9 +35,9 @@ const Footer = (props: Props) => {
   };
 
   return (
-    <div className="select-none py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-gray-100 text-sm mt-8">
+    <div className="select-none px-2 py-2 sm:py-24 sm:px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-gray-100 mt-2 sm:mt-4">
       {/**TOPc */}
-      <div className="flex flex-col md:flex-row justify-between gap-24 p-8">
+      <div className="flex flex-col md:flex-row justify-between gap-4 sm:gap-24 sm:p-8 p-2">
         {/**Left fd*/}
         <div className="w-1/2 flex flex-col gap-2">
           <Link to={"/"}>
@@ -92,7 +92,7 @@ const Footer = (props: Props) => {
           </div>
         </div>
         {/**Center */}
-        <div className="hidden lg:flex justify-between w-1/2 gap-8">
+        <div className="hidden lg:flex justify-between w-1/2 sm:gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="font-semibold text-lg">Richard Mucene</h1>
             <div className="flex flex-col gap-6">
@@ -125,7 +125,7 @@ const Footer = (props: Props) => {
           </div>
         </div>
         {/**Right */}
-        <div className=" w-full md:w-1/2 lg:w-1/4 flex flex-col justify-between xl:w-fit gap-2 p-4 ">
+        <div className=" w-full md:w-1/2 lg:w-1/4 flex flex-col justify-between xl:w-fit gap-2 sm:p-4 ">
           <h1 className="text-lg font-semibold">SUBSCRIBE</h1>
           <p className="text-xs sm:text-sm">
             Stay updated with the latest DevOps news from Richard Mucene, including home projects, vlogs, trends, promotions, job opportunities, and more!
@@ -174,7 +174,7 @@ const Footer = (props: Props) => {
         </div>
       </div>
       {/**BOTTOM */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-2 mb-0">
+      <div className="flex flex-col md:flex-row items-center justify-center ">
         <p className="text-xs sm:text-sm text-center">Copyright 2024 Richard Mucene - All rights reserved. <br />
           All trademarks, service marks, trade names, product names, logos and trade dress appearing on my website are the property of their respective owners.
         </p>
