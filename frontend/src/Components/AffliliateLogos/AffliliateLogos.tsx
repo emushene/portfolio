@@ -27,28 +27,28 @@ type Props = {}
 const AffliliateLogos = (props: Props) => {
   return (
     <div className="hidden md:flex flex-col items-center select-none">
-      <h1 className='font-semibold text-gray-500 text-xl transform select-none' >A Selection of Technologies and Tools Where I Have Extensive Expertise and Proven Experience! </h1>
+      <h1 className='font-semibold text-gray-500 lg:text-sm xl:text-lg transform select-none' >A Selection of Technologies and Tools Where I Have Extensive Expertise and Proven Experience! </h1>
     <div className="hidden md:mt-8 xl:mt-4 md:ml-16 xl:ml-24 2xl:ml-32 md:flex flex-col flex-wrap sm:flex-row items-center gap-6 md:gap-16 md:flex-row sm:mr-4 md:mr-10 xl:mr-20 p-8 sm:flex-grow">
-    <img src={ubuntu} alt="Richard-Mucene-Ubuntu-Linux-Administrator-Logo" className="h-16 w-auto" />
-    <img src={jenkins} alt="Richard-Mucene-jenkin-administrator" className="h-16 w-auto" />
-    <img src={java} alt="Richard-Mucene-java-developer-spring-boot" className="h-16 w-auto" />
-    <img src={nginx} alt="Richard-Mucene-nginx-setup-admin" className="h-16 w-auto" />
-    <img src={terraform} alt="Richard-Mucene-Terraform-infrastructure-as-code" className="h-16 w-auto" />
-    <img src={grafana} alt="Richard-Mucene-Ubuntu-grafana-monitoring" className="h-16 w-auto" />
-    <img src={google} alt="Richard-Mucene-google-cloud-platform-administrator" className="h-16 w-auto" />
-    <img src={azure} alt="Richard-Mucene-microsoft-azure-systems administrator-cloud-engineer" className="h-16 w-auto" />
-    <img src={microsoft} alt="Richard-Mucene-microsoft-systems-administrator" className="h-16 w-auto" />
-    <img src={itil} alt="Richard-Mucene-itil-certified" className="h-16 w-auto" />
-    <img src={aws} alt="Richard-Mucene-certified-aws-profesional-associate-infrastructure" className="h-16 w-auto" />
-    <img src={devops} alt="Richard-Mucene-devops-engineer" className="h-16 w-auto " />
-    <img src={netcore1} alt="Richard-Mucene-dot-net-core" className="h-16 w-auto 6" />
-    <img src={kubernetes} alt="Richard-Mucene-kubernetes-administrator" className="h-16 w-auto" />
-    <img src={vscode} alt="Richard-Mucene-vs-code" className="h-16 w-auto" />
-    <img src={sqlserver} alt="Richard-Mucene-MSSQL-server-Administrator" className="h-16 w-auto" />
-    <img src={msserver} alt="Richard-Mucene-microsoft-server-administrator" className="h-16 w-auto" />
-    <img src={bash} alt="Richard-Mucene-Ubuntu-Linux-Administrator-bash" className="h-16 w-auto" />
-    <img src={docker} alt="Richard-Mucene-docker-administrator" className="h-16 w-auto" />
-    <img src={nodejs} alt="Richard-Mucene-node-js-administrator" className="h-16 w-auto" />
+    <img src={ubuntu} alt="Richard-Mucene-Ubuntu-Linux-Administrator-Logo" className="h-10 w-auto xl:h-16" />
+    <img src={jenkins} alt="Richard-Mucene-jenkin-administrator" className="h-10 w-auto xl:h-16" />
+    <img src={java} alt="Richard-Mucene-java-developer-spring-boot" className="h-10 w-auto xl:h-16" />
+    <img src={nginx} alt="Richard-Mucene-nginx-setup-admin" className="h-10 w-auto xl:h-16" />
+    <img src={terraform} alt="Richard-Mucene-Terraform-infrastructure-as-code" className="h-10 w-auto xl:h-16" />
+    <img src={grafana} alt="Richard-Mucene-Ubuntu-grafana-monitoring" className="h-10 w-auto xl:h-16" />
+    <img src={google} alt="Richard-Mucene-google-cloud-platform-administrator" className="h-10 w-auto xl:h-16" />
+    <img src={azure} alt="Richard-Mucene-microsoft-azure-systems administrator-cloud-engineer" className="h-10 w-auto xl:h-16" />
+    <img src={microsoft} alt="Richard-Mucene-microsoft-systems-administrator" className="h-10 w-auto xl:h-16" />
+    <img src={itil} alt="Richard-Mucene-itil-certified" className="h-10 w-auto xl:h-16" />
+    <img src={aws} alt="Richard-Mucene-certified-aws-profesional-associate-infrastructure" className="h-10 w-auto xl:h-16" />
+    <img src={devops} alt="Richard-Mucene-devops-engineer" className="h-10 w-auto xl:h-16 " />
+    <img src={netcore1} alt="Richard-Mucene-dot-net-core" className="h-10 w-auto xl:h-16 6" />
+    <img src={kubernetes} alt="Richard-Mucene-kubernetes-administrator" className="h-10 w-auto xl:h-16" />
+    <img src={vscode} alt="Richard-Mucene-vs-code" className="h-10 w-auto xl:h-16" />
+    <img src={sqlserver} alt="Richard-Mucene-MSSQL-server-Administrator" className="h-10 w-auto xl:h-16" />
+    <img src={msserver} alt="Richard-Mucene-microsoft-server-administrator" className="h-10 w-auto xl:h-16" />
+    <img src={bash} alt="Richard-Mucene-Ubuntu-Linux-Administrator-bash" className="h-10 w-auto xl:h-16" />
+    <img src={docker} alt="Richard-Mucene-docker-administrator" className="h-10 w-auto xl:h-16" />
+    <img src={nodejs} alt="Richard-Mucene-node-js-administrator" className="h-10 w-auto xl:h-16" />
   </div>
   </div>
   )

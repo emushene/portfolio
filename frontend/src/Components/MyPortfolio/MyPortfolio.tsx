@@ -25,16 +25,16 @@ const MyPortfolio: React.FC = () => {
     return (
       <>
         {myData.map((item: Item) => (
-          <section key={item.id} className="selection-none md:border-b border-gray-300 md:h-[80vh]">
+          <section key={item.id} className="selection-none xl:border-b border-gray-300 md:h-[80vh] ml-24 mr-24">
             <motion.div ref={itemRef} className="flex items-center flex-col md:flex-row justify-between gap-6 flex-grow flex-wrap" style={{ y }}>
-              <div className="hidden md:block  rounded-xl shadow-2xl flex-1 items-center justify-center p-8">
+              <div className="hidden md:block  rounded-xl shadow-2xl flex-1 items-center justify-center p-8 ">
                 <img src={item.img} alt={item.title} className="object-cover md:h-96" />
                 {/* <h1 className="text-center">Image Div</h1> */}
               </div>
 
               <div className="flex flex-col shadow-2xl p-4 gap-3 flex-1">
                 <h1 className="text-sm sm:text-xl font-semibold p-3">{item.title}</h1>
-                <p className="text-gray-700 text-wrap tracking-wider text-xs sm:text-lg p-4">{item.description}</p>
+                <p className="text-gray-700 text-wrap tracking-wider text-xs xl:text-lg p-4">{item.description}</p>
               </div>
             </motion.div>
           </section>
@@ -45,16 +45,16 @@ const MyPortfolio: React.FC = () => {
 
   return (
     <div className="select-none flex flex-col justify-center items-center flex-grow relative" ref={containerRef}>
-      <div className="sticky top-20 z-10 bg-white">
+      <div className="sticky top-20 z-10 bg-white w-full">
         <div className="md:flex justify-center gap-12 sm:flex-row sm:items-center sm:justify-center ">
           <a
-            href="/RichardResume.pdf" // Correct path to the resume file
-            download="Richard_Mucene_Resume.pdf" // Update the file name as needed
-            className=" mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-gray-600"
+            href="/Richard_Mucene_Resume.pdf" // Correct path to the resume file
+            download="Richard-Mucene-Resume.pdf" // Update the file name as needed
+            className=" mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-gray-600 text-sm"
           >
             Download Resume
           </a>
-          <h1 className="font-bold text-center text-gray-600 sm:text-xl md:text-5xl xl:text-5xl">
+          <h1 className="font-bold text-center text-gray-600 xl:text-5xl">
             Education & Featured Work Experience
           </h1>
         </div>

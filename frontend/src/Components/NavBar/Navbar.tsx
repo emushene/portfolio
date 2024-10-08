@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="select-none sticky top-0 z-50 bg-gray-400 md:bg-white h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 border-b border-gray-300">
+    <div className="select-none sticky top-0 z-50 bg-gray-400 md:bg-white h-20 px-4 md:px-8 lg:px-8 xl:px-32 2xl:px-64 border-b border-gray-300">
       {/* MOBILE View */}
-      <div className="md:hidden flex items-center justify-between w-full p-3">
+      <div className="xl:hidden flex items-center justify-between w-full p-3">
        <div className="flex items-center gap-1">
         <div className="rounded-full border h-8 w-8 flex items-center p-1 "><img src={logo} alt="Richard-Mucene-DevOps" height={44} width={44}  /></div>
         
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Larger Screen View */}
-      <div className="hidden md:flex justify-center items-center h-full gap-8 sm:text-sm">
+      <div className="hidden xl:flex justify-center items-center h-full gap-8 sm:text-sm ">
         {/* Left Section */}
         <div className="w-1/3 xl:w-1/2 flex items-center gap-12">
           <Link to={"/"}>
@@ -84,12 +84,13 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-2/3 flex items-center justify-between gap-8 xl:w-1/2 ">
+        <div className="w-2/3 flex items-center justify-between  xl:w-1/20">
           {/* SearchBar integrated with proper props */}
           <SearchBar
             onSearchSubmit={onSearchSubmit}
             search={search}
             handleSearchChange={handleSearchChange}
+            
           />
           <NavIcons />
         </div>

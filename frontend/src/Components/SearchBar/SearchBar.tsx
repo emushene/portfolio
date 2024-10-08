@@ -9,7 +9,7 @@ interface Props {
 
 const SearchBar: React.FC<Props> = ({ onSearchSubmit, search, handleSearchChange }: Props) => {
   return (
-    <div className="flex-1 flex items-center bg-gray-200 rounded-md p-2">
+    <div className="flex-1 flex items-center bg-gray-200 rounded-md p-2 mr-2">
       <form onSubmit={onSearchSubmit} className="flex items-center flex-1">
         <input
           value={search}

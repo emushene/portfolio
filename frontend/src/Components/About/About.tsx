@@ -7,19 +7,19 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 md:mx-32 text-gray-600 text-xs sm:text-sm lg:text-lg">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 md:mx-32 text-gray-600 text-xs sm:text-sm xl:text-lg">
       {/* Profile Picture */}
       <div className="flex justify-center md:justify-center">
         <img
           src={profilepic}
           alt="richard-mucene-profile"
-          className="rounded-full w-32 h-32 md:w-64 md:h-64 object-cover filter grayscale"
+          className="rounded-full w-32 h-32 xl:w-64 xl:h-64 object-cover filter grayscale"
         />
       </div>
 
       {/* About Me Text with Integrated Photos and Captions */}
       <div className="col-span-2 space-y-4">
-        <h2 className="font-bold mb-4 font-gray-700 text-xl">About Me</h2>
+        <h2 className="font-bold mb-4 font-gray-700 xl:text-xl">About Me</h2>
         <p className="">
           Family and community are at the core of who I am. As a devoted father
           of four, I’ve always believed that the values we instill at home
