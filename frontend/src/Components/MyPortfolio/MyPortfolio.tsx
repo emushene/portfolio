@@ -25,7 +25,7 @@ const MyPortfolio: React.FC = () => {
     return (
       <>
         {myData.map((item: Item) => (
-          <section key={item.id} className="selection-none xl:border-b border-gray-300 md:h-[80vh] ml-24 mr-24">
+          <section key={item.id} className="selection-none xl:border-b border-gray-300 md:h-[80vh] xl:ml-24 xl:mr-24">
             <motion.div ref={itemRef} className="flex items-center flex-col md:flex-row justify-between gap-6 flex-grow flex-wrap" style={{ y }}>
               <div className="hidden md:block  rounded-xl shadow-2xl flex-1 items-center justify-center p-8 ">
                 <img src={item.img} alt={item.title} className="object-cover md:h-96" />
@@ -45,7 +45,7 @@ const MyPortfolio: React.FC = () => {
 
   return (
     <div className="select-none flex flex-col justify-center items-center flex-grow relative" ref={containerRef}>
-      <div className="sticky top-20 z-10 bg-white w-full">
+      <div className="sticky top-20 z-10 bg-white w-fit p-2">
         <div className="md:flex justify-center gap-12 sm:flex-row sm:items-center sm:justify-center ">
           <a
             href="/Richard_Mucene_Resume.pdf" // Correct path to the resume file
