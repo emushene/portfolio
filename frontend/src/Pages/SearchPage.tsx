@@ -19,19 +19,18 @@ const SearchPage: React.FC = () => {
     const query = queryParams.get('query') || "";
     setSearch(query);
     if (query) {
+      const performSearch = async (query: string) => {
+        const result = await searchCompanies(query);
+        if (typeof result === "string") {
+          setServerError(result);
+        } else if (Array.isArray(result.data)) {
+          setSearchResult(result.data);
+        }
+      };
+
       performSearch(query);
     }
   }, [location.search]);
-
-  const performSearch = async (query: string) => {
-    const result = await searchCompanies(query);
-    if (typeof result === "string") {
-      setServerError(result);
-    } else if (Array.isArray(result.data)) {
-      setSearchResult(result.data);
-    }
-    console.log(searchResult);
-  };
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
@@ -39,15 +38,20 @@ const SearchPage: React.FC = () => {
 
   const onSearchSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    performSearch(search);
+    const result = await searchCompanies(search);
+    if (typeof result === "string") {
+      setServerError(result);
+    } else if (Array.isArray(result.data)) {
+      setSearchResult(result.data);
+    }
   };
 
   const onPortfolioCreate = (e: any) => {
     e.preventDefault();
-    const exists = portfolioValues.find((value) => value === e.target[0].value );
-    if(exists) return
-   const updatedPortfolio = [...portfolioValues, e.target[0].value];
-   setPortfolioValues(updatedPortfolio)
+    const exists = portfolioValues.find((value) => value === e.target[0].value);
+    if (exists) return;
+    const updatedPortfolio = [...portfolioValues, e.target[0].value];
+    setPortfolioValues(updatedPortfolio);
   };
 
   const onPortfolioDelete = (e: any) => {
@@ -56,7 +60,7 @@ const SearchPage: React.FC = () => {
       return value !== e.target[0].value;
     });
     setPortfolioValues(removed);
-  }
+  };
 
   return (
     <div className="flex flex-col items-center min-h-screen gap-5 overflow-hidden text-blue-900 xl:mt-24 sm:mt-24">
