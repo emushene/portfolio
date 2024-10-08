@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../NavBar/logo1.png";
+import logo from "../NavBar/logo.png";
 import facebook from "./facebook.png";
 import twitter from "./x.png";
 import instagram from "./youtube.png";
@@ -125,9 +125,9 @@ const Footer = (props: Props) => {
           </div>
         </div>
         {/**Right */}
-        <div className=" w-full md:w-1/2 lg:w-1/4 flex flex-col justify-between xl:w-full gap-2 p-4 border-red-300">
+        <div className=" w-full md:w-1/2 lg:w-1/4 flex flex-col justify-between xl:w-fit gap-2 p-4 ">
           <h1 className="text-lg font-semibold">SUBSCRIBE</h1>
-          <p>
+          <p className="text-xs sm:text-sm">
             Stay updated with the latest DevOps news from Richard Mucene, including home projects, vlogs, trends, promotions, job opportunities, and more!
           </p>
           <div className="flex">
@@ -175,7 +175,7 @@ const Footer = (props: Props) => {
       </div>
       {/**BOTTOM */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-2 mb-0">
-        <p className="text-center">Copyright 2024 Richard Mucene - All rights reserved. <br />
+        <p className="text-xs sm:text-sm text-center">Copyright 2024 Richard Mucene - All rights reserved. <br />
           All trademarks, service marks, trade names, product names, logos and trade dress appearing on my website are the property of their respective owners.
         </p>
       </div>

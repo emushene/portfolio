@@ -1,6 +1,6 @@
 import React, { ChangeEvent, SyntheticEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "./logo2.png";
+import logo from "./logo.png";
 import Menu from "../Menu/Menu";
 import SearchBar from "../SearchBar/SearchBar";
 import NavIcons from "../NavBarIcons/NavIcons";
@@ -25,8 +25,10 @@ const Navbar: React.FC = () => {
   return (
     <div className="select-none sticky top-0 z-50 bg-gray-400 md:bg-white h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 border-b border-gray-300">
       {/* MOBILE View */}
-      <div className="md:hidden flex items-center justify-between w-full bg-gray-400 p-2">
-       <div>
+      <div className="md:hidden flex items-center justify-between w-full p-3">
+       <div className="flex items-center gap-1">
+        <div className="rounded-full border h-8 w-8 flex items-center p-1 "><img src={logo} alt="Richard-Mucene-DevOps" height={44} width={44}  /></div>
+        
        <Link to={"/"}>
           <div className="text-2xl tracking-wide text-gray-700 font-semibold">Richard</div>
         </Link>
@@ -42,12 +44,14 @@ const Navbar: React.FC = () => {
         {/* Left Section */}
         <div className="w-1/3 xl:w-1/2 flex items-center gap-12">
           <Link to={"/"}>
-            <img
+          <div className="rounded-full border-2 p-2">
+          <img
               src={logo}
               alt="Richard-Mucene-DevOps-Engineer-Johannesburg"
-              className="h-24 mt-4 hidden"
+              className="h-5 w-5"
             />
-            <div className="text-2xl tracking-wide"></div>
+          </div>
+             
           </Link>
 
           <div className="hidden xl:flex gap-4 text-sm">
