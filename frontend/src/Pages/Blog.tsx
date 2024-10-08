@@ -3,7 +3,6 @@ import { Link, Outlet } from "react-router-dom";
 import { useAuth } from "../Components/Blog/AuthContext";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase-config";
-import DOMPurify from "dompurify";
 
 const Blog = () => {
   const { isAuth, setIsAuth } = useAuth();
@@ -57,15 +56,14 @@ const Blog = () => {
       }
     };
     getPosts();
-  }, [postCollections]); // Added postCollections as a dependency
+  }, [postCollections]);
 
   const toggleExpand = (id: string) => {
     setPostList((prevPostList) =>
-      prevPostList.map(
-        (post) =>
-          post.id === id
-            ? { ...post, isExpanded: !post.isExpanded, phase: 1 } // Toggle the expanded state
-            : { ...post, isExpanded: false } // Collapse all other posts
+      prevPostList.map((post) =>
+        post.id === id
+          ? { ...post, isExpanded: !post.isExpanded, phase: 1 } // Toggle the expanded state
+          : { ...post, isExpanded: false } // Collapse all other posts
       )
     );
     setSelectedPost(id); // Set the clicked post as the selected post
@@ -73,8 +71,8 @@ const Blog = () => {
 
   const loadMoreContent = (id: string) => {
     setPostList((prevPostList) =>
-      prevPostList.map(
-        (post) => (post.id === id ? { ...post, phase: post.phase + 1 } : post) // Increase the phase to load more content
+      prevPostList.map((post) =>
+        post.id === id ? { ...post, phase: post.phase + 1 } : post
       )
     );
   };
@@ -128,9 +126,8 @@ const Blog = () => {
         {postList.map((post) => {
           const contentChunks = post.content.split("\n");
           const displayedContent = contentChunks
-            .slice(0, post.phase * 5)
+            .slice(0, post.phase * 5) // Load content based on the phase
             .join("\n");
-          const sanitizedContent = DOMPurify.sanitize(displayedContent); // Sanitize the content
 
           return (
             <div
@@ -150,7 +147,8 @@ const Blog = () => {
               </div>
               <div
                 className="w-full text-gray-600 p-6 text-wrap text-sm font-thin tracking-wide md:text-xl"
-                dangerouslySetInnerHTML={{ __html: sanitizedContent }} // Render sanitized content
+                // Render content without sanitization
+                dangerouslySetInnerHTML={{ __html: displayedContent }} 
               />
               <div className="flex justify-between">
                 {post.phase * 5 < contentChunks.length && (

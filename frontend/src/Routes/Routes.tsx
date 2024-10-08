@@ -21,31 +21,23 @@ import NotFound from "../NotFound/NotFound";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App />, // This will render Navbar, Footer, and an Outlet for the main content
     children: [
       { path: "/", element: <HomePage /> },
-      { path: "/search", element: <SearchPage /> },
-      {
-        path: "/company/:ticker",
-        element: <CompanyPage />,
-        children: [
-          { path: "company-profile", element: <CompanyProfile /> },
-          { path: "income-statement", element: <IncomeStatement /> },
-          { path: "balance-sheet", element: <BalanceSheet /> },
-          { path: "cashflow-statement", element: <CashflowStatement /> },
-        ],
-      },
+      { path: "/search", element: <SearchPage /> }, // Separate SearchPage for search results
+      { path: "/company/:ticker", element: <CompanyPage />, children: [
+        { path: "company-profile", element: <CompanyProfile /> },
+        { path: "income-statement", element: <IncomeStatement /> },
+        { path: "balance-sheet", element: <BalanceSheet /> },
+        { path: "cashflow-statement", element: <CashflowStatement /> },
+      ]},
       { path: "/dashboard", element: <Dashboard /> },
       { path: "/about-me", element: <About /> },
       { path: "/resume", element: <Resume /> },
-      {
-        path: "/blog",
-        element: <Blog />,
-        children: [
-          { path: "blog-login", element: <BlogLogin /> },
-          { path: "blog-create", element: <CreatePost /> },
-        ],
-      },
+      { path: "/blog", element: <Blog />, children: [
+        { path: "blog-login", element: <BlogLogin /> },
+        { path: "blog-create", element: <CreatePost /> },
+      ]},
       { path: "/contact", element: <Contact /> },
       { path: "/myprofile", element: <MyProfile /> },
       { path: "/design-guide", element: <DesignPage /> },

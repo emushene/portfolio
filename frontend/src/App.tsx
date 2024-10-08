@@ -10,11 +10,12 @@ function App() {
 
   return (
     <>
-    <AuthProvider>
-      <Navbar />
-      <Outlet  /> 
-      <Footer />
-    </AuthProvider>
+      <AuthProvider>
+        <Navbar />
+        {/* Main content outlet */}
+        <Outlet />
+        <Footer />
+      </AuthProvider>
     </>
   );
 }
